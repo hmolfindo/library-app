@@ -2,7 +2,7 @@
     padding: 5px;
     border: 1px solid black;
     width: 70vw;
-    height: 70vh;
+    height: 95vh;
     display: grid;
     grid-auto-flow: row;
     grid-template-columns: repeat(4, 1fr);
@@ -11,6 +11,8 @@
 }
 
 body{
+    margin: 0;
+    padding: 4px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,4 +23,21 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: scroll;
+}
+
+dialog::backdrop{
+    background-color: black;
+    opacity: 0.65;
+}
+
+#form-div{
+    display: grid;
+    width: 20vw;
+}
+
+.form-row{
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
 }
