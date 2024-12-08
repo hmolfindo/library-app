@@ -59,10 +59,11 @@ function displayBooks(){
     })
 }
 
-const dialog = document.querySelector("dialog");
+const dialog = document.getElementById("form-dialog");
 const newBook = document.getElementById("newBook");
 const closeBtn = document.getElementById("closeBtn");
 const submitBtn = document.getElementById("submitBtn");
+const form = document.getElementById("form-dialog");
 
 //Open add book form
 newBook.addEventListener("click", () => {
@@ -80,7 +81,7 @@ const pages = document.getElementById("pages");
 const isRead = document.getElementById("isRead");
 
 //Submit new book
-submitBtn.addEventListener("click", (event) => {
+form.addEventListener("submit", (event) => {
     //Take input content and make properties of new object
     event.preventDefault();
     const bookTitle = title.value;

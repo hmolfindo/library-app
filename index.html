@@ -8,32 +8,29 @@
 </head>
 <body>
     <div id="container"></div>
-    <dialog>
-        <div id="form-div">
-            <form action="">
-                <div class="form-row">
-                    <label for="title">Book Title: </label>
-                    <input type="text" name="title" id="title">
-                </div>
-                <div class="form-row">
-                    <label for="author">Author: </label>
-                    <input type="text" name="author" id="author">
-                </div>
-                <div class="form-row">
-                    <label for="pages">Pages: </label>
-                    <input type="number" name="pages" id="pages">
-                </div>
-                <div class="form-row">
-                    <label for="isRead">Read: </label>
-                    <input type="checkbox" name="isRead" id="isRead">
-                </div>
-                <div class="form-row form-buttons">
-                    <button id="submitBtn">Add Book</button>
-                    <button id="closeBtn">Close</button>
-                </div>
-            </form>
-        </div>
-        
+    <dialog id="form-dialog">
+        <form>
+            <div class="form-row">
+                <label for="title">Book Title: </label>
+                <input type="text" name="title" id="title" required>
+            </div>
+            <div class="form-row">
+                <label for="author">Author: </label>
+                <input type="text" name="author" id="author" required>
+            </div>
+            <div class="form-row">
+                <label for="pages">Pages: </label>
+                <input type="number" name="pages" id="pages" required>
+            </div>
+            <div class="form-row">
+                <label for="isRead">Read: </label>
+                <input type="checkbox" name="isRead" id="isRead">
+            </div>
+            <div class="form-row form-buttons">
+                <button id="closeBtn">Cancel</button>
+                <button type="submit" id="submitBtn">Add Book</button>
+            </div>
+        </form>
     </dialog>
     <button id="newBook">New Book</button>
     <script src="library.js"></script>

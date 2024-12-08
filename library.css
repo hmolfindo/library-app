@@ -23,7 +23,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: scroll;
+    overflow: none;
 }
 
 dialog::backdrop{
