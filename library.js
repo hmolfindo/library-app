@@ -50,10 +50,22 @@ function displayBooks(){
     container.textContent = "";
     myLibrary.forEach(function(book){
         const div = document.createElement("div");
-        div.textContent = book.title + "" +
-                            book.author +
-                            book.pages +
-                            book.status;
+        const title = document.createElement("h3");
+        const author = document.createElement("p");
+        const pages = document.createElement("p");
+        const read = document.createElement("p");
+        title.textContent = book.title;
+        author.textContent = book.author;
+        pages.textContent = book.pages;
+        read.textContent = book.status;
+        div.appendChild(title);
+        div.appendChild(author);
+        div.appendChild(pages);
+        div.appendChild(read);
+        // div.textContent = book.title + "" +
+        //                     book.author +
+        //                     book.pages +
+        //                     book.status;
         div.className = "bookDiv";
         container.appendChild(div);
     })
