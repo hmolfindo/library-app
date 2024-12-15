@@ -36,7 +36,7 @@ function Book(title, author, pages, isRead) {
     this.author = author;
     this.pages = pages;
     this.isRead = isRead;
-    this.status = isRead != "on" ? "Read" : "Not read yet";
+    this.status = isRead ? "Read" : "Not read yet";
 }
 
 function addBookToLibrary(newBook){
@@ -54,6 +54,8 @@ function displayBooks(){
         const author = document.createElement("p");
         const pages = document.createElement("p");
         const read = document.createElement("p");
+        const buttonDiv = document.createElement("div");
+        
         title.textContent = book.title;
         author.textContent = book.author;
         pages.textContent = book.pages;
@@ -62,10 +64,6 @@ function displayBooks(){
         div.appendChild(author);
         div.appendChild(pages);
         div.appendChild(read);
-        // div.textContent = book.title + "" +
-        //                     book.author +
-        //                     book.pages +
-        //                     book.status;
         div.className = "bookDiv";
         container.appendChild(div);
     })
